@@ -70,6 +70,26 @@ html,body{margin:0;padding:0;background:#efe9d9;color:var(--ink);font-family:"No
 .profile .card .num{font-size:22px;color:var(--gold);font-weight:bold;line-height:1}
 .profile .card .lbl{font-size:10px;color:var(--mute);letter-spacing:2px;margin-top:4px;text-transform:uppercase}
 
+/* ===== Photo gallery ===== */
+.photo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:20px 0}
+.photo-grid.wide{grid-template-columns:1fr}
+.photo{border:1px solid var(--line);background:#fff;padding:6px}
+.photo img{width:100%;height:auto;display:block}
+.photo .cap{padding:8px 4px 2px;font-size:11px;color:var(--ink2);line-height:1.5}
+.photo .cap b{color:var(--gold);letter-spacing:1px;font-size:10px;display:block;margin-bottom:2px}
+.photo .src{font-size:10px;color:var(--mute);margin-top:4px;font-style:italic}
+.inline-photo{margin:14px 0;border:1px solid var(--line);padding:6px;background:#fff}
+.inline-photo img{width:100%;height:auto;display:block}
+.inline-photo .cap{padding:6px 4px 0;font-size:11px;color:var(--mute);text-align:center}
+
+/* ===== Downloads ===== */
+.downloads{margin:14px 0;padding:16px 20px;background:#f5efdf;border-left:3px solid var(--gold-soft)}
+.downloads h4{margin:0 0 10px;font-size:12px;letter-spacing:2px;color:var(--brick)}
+.downloads ul{margin:0;padding-left:18px;font-size:12px;list-style:none;columns:2;column-gap:24px}
+.downloads li{margin:4px 0;break-inside:avoid}
+.downloads a{color:var(--sage);text-decoration:none;border-bottom:1px dotted var(--sage)}
+.downloads a:hover{color:var(--brick);border-bottom-color:var(--brick)}
+
 /* ===== Footer ===== */
 .foot{margin-top:64px;padding:20px 0;border-top:2px solid var(--gold);text-align:center;font-size:11px;color:var(--mute);letter-spacing:2px}
 
@@ -182,6 +202,8 @@ html,body{margin:0;padding:0;background:#efe9d9;color:var(--ink);font-family:"No
       </ol>
     </li>
     <li><strong>필수 장비 목록</strong></li>
+    <li><strong>제조 공정 사진 자료</strong> — 국립축산과학원</li>
+    <li><strong>원본 참고자료 다운로드</strong></li>
   </ol>
 </div>
 
@@ -1154,6 +1176,135 @@ html,body{margin:0;padding:0;background:#efe9d9;color:var(--ink);font-family:"No
   <p><b>Phase 1 · 프레시 라인 (3~500만원)</b> — 20L 이중자켓 팬 · 배치살균기 · pH미터 · 온도계 · 커드나이프 · 모짜렐라·리코타·크림치즈 몰드 · 진공포장기 · 무명천 · 스타터·렌넷 세트. <span class="badge">1개월 판매 가능</span></p>
   <p><b>Phase 2 · 숙성 라인 (+700만원)</b> — 크림분리기 · 버터 처너 · 카망베르·고다 몰드 · 수동 프레스 · 숙성 챔버(중고 와인셀러 개조 가능) · 왁스포트. <span class="badge">3~6개월 후 판매</span></p>
   <p><b>Phase 3 · 프리미엄 라인 (+1,500만원)</b> — 원심 크림분리기 · 공압프레스 · 별도 숙성 챔버 3개(연질·경질·블루) · CIP · 파마산 12~24개월 프로젝트. <span class="badge">2~3년 자산화</span></p>
+</div>
+
+<!-- ============================================================
+     CHAPTER 10 · PROCESS PHOTOS
+============================================================ -->
+<div class="chapter">
+  <div class="num">C H A P T E R &nbsp; 1 0</div>
+  <h2>제조 공정 사진 자료</h2>
+  <p>국립축산과학원 축산물이용과 「자연치즈 제조 이론 및 실습」·「발효버터 제조실습」 원본 발췌.</p>
+</div>
+
+<div class="intro">
+  <h3>1. 신선치즈 · 파스타 필라타 분류</h3>
+  <p>파스타 필라타(Pasta Filata) — "잡아 늘려 반죽한다"는 뜻. 커드를 탄력이 생길 때까지 반죽하여 만든 치즈로, 성형 방식에 따라 모짜렐라·노디니(매듭)·스트링·뜨레차(댕기머리)로 나뉜다.</p>
+</div>
+<div class="photo-grid">
+  <div class="photo">
+    <img src="images/pasta-filata-types-06.jpg" alt="파스타 필라타 치즈 종류">
+    <div class="cap"><b>P L A T E &nbsp; 0 1</b>파스타 필라타 계열: 스트링·모짜렐라·노디니·뜨레차·프로볼로네. Jersey A2 우유는 지방구가 커 늘어남이 부드럽고 광택이 좋다.<div class="src">출처: 국립축산과학원 자연치즈 실습 p.6</div></div>
+  </div>
+  <div class="photo">
+    <img src="images/cheese-overview-02.jpg" alt="숙성 치즈 · 신선 치즈 개관">
+    <div class="cap"><b>P L A T E &nbsp; 0 2</b>고부가 유제품 개관 — 목장형 자연치즈 48종(숙성 28·신선 18) 개발 확립.<div class="src">출처: 국립축산과학원 자연치즈 실습 p.2</div></div>
+  </div>
+</div>
+
+<div class="intro">
+  <h3>2. 퀘소 블랑코 · 신선치즈 제조 공정</h3>
+  <p>가장 진입장벽이 낮은 신선치즈. 원유 90~95℃ 가온 → 구연산액 첨가 → 응고 → 유청배출 → 성형. 수율 16~18%.</p>
+</div>
+<div class="photo-grid">
+  <div class="photo">
+    <img src="images/queso-blanco-process-11.jpg" alt="퀘소 블랑코 원유 가온·구연산 첨가">
+    <div class="cap"><b>P L A T E &nbsp; 0 3</b>① 원유 가온 (90~95℃, 끓어넘치지 않게 주의) ② 구연산액 서서히 첨가·교반.<div class="src">출처: 국립축산과학원 자연치즈 실습 p.11</div></div>
+  </div>
+  <div class="photo">
+    <img src="images/queso-blanco-molding-12.jpg" alt="유청 배출·가염·색소 첨가">
+    <div class="cap"><b>P L A T E &nbsp; 0 4</b>⑤ 치즈포로 유청 배출 → ⑥ 커드 2% 가염·압착 → ⑦ 포장·냉장. 당근·시금치·복분자즙 2~3% 첨가로 색소 표현 가능.<div class="src">출처: 국립축산과학원 자연치즈 실습 p.12</div></div>
+  </div>
+</div>
+
+<div class="intro">
+  <h3>3. 스트링 치즈 제조 공정 (10단계 전공정)</h3>
+  <p>국립축산과학원 확립 공정. 원유 100kg 기준: 살균(65℃×30분) → 냉각(34℃) → 스타터 3g → 렌넷 23mL → 커드 1×1×1cm 절단 → 43℃ 가온 → pH 5.2 도달 → 75℃ 열수 성형.</p>
+</div>
+<div class="photo-grid wide">
+  <div class="photo">
+    <img src="images/string-cheese-process-15.jpg" alt="스트링 치즈 10단계 전공정 사진">
+    <div class="cap"><b>P L A T E &nbsp; 0 5</b>스트링 치즈 제조 공정 (원유 100kg 기준) — 살균·냉각·스타터·렌넷·커드 절단·가온·교반·유청배출·열수 성형·완성.<div class="src">출처: 국립축산과학원 자연치즈 실습 p.15 (모짜렐라·스트링 공통 공정)</div></div>
+  </div>
+</div>
+
+<div class="intro">
+  <h3>4. 살균·냉각·스타터 (STEP 1~3)</h3>
+</div>
+<div class="photo-grid">
+  <div class="photo">
+    <img src="images/pasteurization-16.jpg" alt="살균·냉각·스타터 접종">
+    <div class="cap"><b>P L A T E &nbsp; 0 6</b>① 원유 65℃×30분 저온살균 (LTLT) ② 34℃까지 냉각 ③ 고온균 스타터 3g/100kg 첨가, 40분 유지. <i>Lactobacillus bulgaricus</i> + <i>Streptococcus thermophilus</i>.<div class="src">출처: 국립축산과학원 자연치즈 실습 p.16</div></div>
+  </div>
+  <div class="photo">
+    <img src="images/rennet-cutting-17.jpg" alt="렌넷 첨가·커드 절단">
+    <div class="cap"><b>P L A T E &nbsp; 0 7</b>④ 렌넷 23mL(원유 100kg 기준)을 물에 10배 희석 첨가·2분 교반·40분 정치 (32℃) ⑤ 응고 확인 ⑥ 커드 1cm 격자 절단, pH 6.2 기준.<div class="src">출처: 국립축산과학원 자연치즈 실습 p.17</div></div>
+  </div>
+</div>
+
+<div class="intro">
+  <h3>5. 커드 절단·가온·유청 배출 (STEP 4~7)</h3>
+</div>
+<div class="photo-grid">
+  <div class="photo">
+    <img src="images/curd-cutting-18.jpg" alt="커드 격자 절단 (Cutting)">
+    <div class="cap"><b>P L A T E &nbsp; 0 8</b>커드 절단(Cutting) — 가로·세로 1cm 격자. "천천히 약하게" 잘라준다 — 강하게 빠르게 절단 시 커드 조직 부서짐 → 수율 감소·연약해짐. 절단 후 5분 치유(healing).<div class="src">출처: 국립축산과학원 자연치즈 실습 p.18</div></div>
+  </div>
+  <div class="photo">
+    <img src="images/heating-stirring-19.jpg" alt="가온·교반·유청 배출">
+    <div class="cap"><b>P L A T E &nbsp; 0 9</b>⑦ 43℃까지 30분에 걸쳐 서서히 가온 (1℃당 3분), 15분 추가 교반 ⑧ 40분 정치 후 유청 배출 (pH 5.9 도달 시) ⑨ 75℃ 열수 성형 준비.<div class="src">출처: 국립축산과학원 자연치즈 실습 p.19</div></div>
+  </div>
+</div>
+
+<div class="intro">
+  <h3>6. 파스타 필라타 성형·염지 (STEP 8~10)</h3>
+</div>
+<div class="photo-grid">
+  <div class="photo">
+    <img src="images/mozzarella-forming-21.jpg" alt="모짜렐라 열수 성형 4단계">
+    <div class="cap"><b>P L A T E &nbsp; 1 0</b>모짜렐라 열수 성형 — ⑩ 늘어남 확인 ⑪ 동그랗게 반죽·엄지검지 사이로 뽑아냄 ⑫ 오른손 엄지로 밑부분 끊어냄 ⑬ 소금물 15분 염지·냉장 건조. pH 5.2 도달 시 75℃ 열수 성형 개시.<div class="src">출처: 국립축산과학원 자연치즈 실습 p.21</div></div>
+  </div>
+  <div class="photo">
+    <img src="images/nodini-treccia-24.jpg" alt="노디니·트레차 성형">
+    <div class="cap"><b>P L A T E &nbsp; 1 1</b>노디니(매듭)·트레차(댕기머리) 성형 응용 — 80℃ 열수로 커드 반죽 → 손가락에 감아 매듭 짓거나 삼등분해 교차 꼬아 만든다. 기호에 따라 소금물 염지.<div class="src">출처: 국립축산과학원 자연치즈 실습 p.24</div></div>
+  </div>
+</div>
+
+<div class="intro">
+  <h3>7. 유가공 장비 실물 · Equipment</h3>
+</div>
+<div class="photo-grid">
+  <div class="photo">
+    <img src="images/pasteurizer-machine-25.jpg" alt="배치 저온살균기 (LTLT)">
+    <div class="cap"><b>P L A T E &nbsp; 1 2</b>배치 저온살균기 — 이중자켓·디지털 온도조절·교반기 일체형. LTLT 63~65℃×30분 / HTST 72~75℃×15~20초 / UHT 135~140℃×2~4초 모드 지원.<div class="src">출처: 국립축산과학원 발효버터 실습 p.25</div></div>
+  </div>
+  <div class="photo">
+    <img src="images/cream-separator-07.jpg" alt="원심 크림 분리기">
+    <div class="cap"><b>P L A T E &nbsp; 1 3</b>원심 크림 분리기 (Disc-stack Centrifugal Separator) — 유지방구 농축, 탈지유·크림 분리. Pearson's Square 공식으로 유지방 18~50% 표준화.<div class="src">출처: 국립축산과학원 발효버터 실습 p.7</div></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     CHAPTER 11 · DOWNLOADS
+============================================================ -->
+<div class="chapter">
+  <div class="num">C H A P T E R &nbsp; 1 1</div>
+  <h2>원본 참고자료 다운로드</h2>
+  <p>제조 공정 원본 PDF 자료 (국립축산과학원·개별 교육자료).</p>
+</div>
+
+<div class="downloads">
+  <h4>D O W N L O A D S</h4>
+  <ul>
+    <li>📄 <a href="refs/cheese-manual.pdf">자연치즈 제조 이론 및 실습</a> — 국립축산과학원 (5.2MB)</li>
+    <li>📄 <a href="refs/butter-manual.pdf">발효버터 제조 실습</a> — 유자연 연구관, 2019 (2.6MB)</li>
+    <li>📄 <a href="refs/cheese-process.pdf">Cheese Process (전공정 도해)</a> (1.3MB)</li>
+    <li>📄 <a href="refs/camembert.pdf">까망베르 치즈 제조방법</a> (1.1MB)</li>
+    <li>📄 <a href="refs/halloumi.pdf">할루미 치즈 제조공정</a> (617KB)</li>
+    <li>📄 <a href="refs/string-cheese.pdf">스트링 치즈 제조공정</a> (91KB)</li>
+    <li>📄 <a href="refs/fermented-milk.pdf">발효유 제조공정</a> (63KB)</li>
+    <li>📄 <a href="refs/starter-microbes.pdf">스타터 유산균 미생물 자료</a> (107KB)</li>
+  </ul>
 </div>
 
 <div class="intro" style="margin-top:32px;background:#f5efdf">
