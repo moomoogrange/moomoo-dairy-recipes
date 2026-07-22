@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* MooMoo Tech Blog 와 동일한 디자인 토큰. 레시피북에 필요한 sage/brick 계열만 확장했다. */
+@theme inline {
+  --font-sans: "Noto Sans KR", sans-serif;
+  --font-serif: "Noto Serif KR", serif;
+  --font-display: "Cormorant Garamond", serif;
+  --color-warm-ivory: #f5f0e8;
+  --color-milk-white: #faf7f2;
+  --color-dawn-gold: #8c6316;
+  --color-deep-brown: #5c4033;
+  --color-sage-green: #7a8b6f;
+  --color-bg-primary: #f5f0e8;
+  --color-bg-secondary: #faf7f2;
+  --color-text-primary: #5c4033;
+  --color-text-secondary: #7a6b5d;
+  --color-border: #e5ddd0;
+  --color-accent-soft: #f0e8d8;
+  --color-brick: #8b3a2b;
+  --default-font-family: "Noto Sans KR", sans-serif;
+}
+
+:root {
+  --color-bg-primary: #f5f0e8;
+  --color-bg-secondary: #faf7f2;
+  --color-text-primary: #5c4033;
+  --color-text-secondary: #7a6b5d;
+  --color-border: #e5ddd0;
+  --color-dawn-gold: #8c6316;
+  --color-sage-green: #7a8b6f;
+  --color-accent-soft: #f0e8d8;
+  --color-brick: #8b3a2b;
+}
+
+.dark {
+  --color-bg-primary: #1a1612;
+  --color-bg-secondary: #231f1a;
+  --color-text-primary: #e8e0d4;
+  --color-text-secondary: #b8a99a;
+  --color-border: #3d3429;
+  --color-dawn-gold: #d4b47c;
+  --color-sage-green: #9cad91;
+  --color-accent-soft: #2c261f;
+  --color-brick: #d98b78;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  /* 모바일에서 가로 방향 전환 시 폰트가 임의로 커지는 것을 막는다. */
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* sticky 헤더 높이 + 여유. 헤더가 모바일에서 더 낮으므로 분기한다. */
+  scroll-padding-top: 4.5rem;
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 5.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+::selection {
+  background-color: rgba(140, 99, 22, 0.3);
+}
+
+/* 본문 인라인 마크업 — 원본 HTML 에서 추출한 <b>, <span class="spec">, <span class="badge"> 를 그대로 살린다. */
+.rich b {
+  font-weight: 500;
+  color: var(--color-dawn-gold);
+}
+
+.rich i {
+  font-style: italic;
+}
+
+.rich .spec {
+  display: inline-block;
+  margin-top: 0.125rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+}
+
+.rich .badge {
+  display: inline-block;
+  padding: 0.0625rem 0.5rem;
+  margin-right: 0.25rem;
+  border-radius: 9999px;
+  background-color: var(--color-sage-green);
+  color: var(--color-bg-secondary);
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* ===== 인쇄 (A4 레시피북) — 원본의 인쇄 품질을 유지한다. ===== */
+@media print {
+  /* 인쇄물은 항상 라이트 테마로 강제한다. */
+  :root,
+  .dark {
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #ffffff;
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #555555;
+    --color-border: #cccccc;
+    --color-dawn-gold: #8c6316;
+    --color-sage-green: #5b6b4a;
+    --color-accent-soft: #f5f1e6;
+    --color-brick: #8b3a2b;
+  }
+
+  body {
+    background: #ffffff;
+    font-size: 10.5pt;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-page-break {
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .print-flat {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  html {
+    scroll-padding-top: 0;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 16mm 14mm;
+}
